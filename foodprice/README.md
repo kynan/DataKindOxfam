@@ -1,4 +1,4 @@
-Food price prediction in Kenya
+Mapping food price information
 ==============================
 
-A project for [London DataDive](https://datadivelondon.eventbrite.co.uk).
+Simple webapp to visualize food price information across regions/countries.
