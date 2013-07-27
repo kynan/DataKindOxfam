@@ -25,7 +25,7 @@ def geocode(location):
 
 
 def process(row):
-    row['lat'], row['lng'] = geocode(row['location'])
+    row['lat'], row['lon'] = geocode(row['location'])
     return row
 
 
