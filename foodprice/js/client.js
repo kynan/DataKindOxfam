@@ -1,5 +1,9 @@
-function initDoc(){
-    //load a map centred on Kenya
+'use strict';
+
+angular.module('angularApp', []);
+
+function MainController($scope, $http){
+  //load a map centred on Kenya
 	var map = L.map('map').setView([-0.197754,38.144531], 6);
 
 	var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
@@ -26,7 +30,7 @@ function initDoc(){
 	info.addTo(map);
 
 	// simple colour map
-    // TODO: cleander with d3 scale
+  // TODO: cleander with d3 scale
 	function getColor(d) {
 		return d > 1000 ? '#800026' :
 		       d > 500  ? '#BD0026' :
@@ -86,12 +90,12 @@ function initDoc(){
 		});
 	}
 
-    $.getJSON("data/kenyacounties.geojson", function(json) {
-   	    geojson = L.geoJson(json, {
-		    style: style,
-		    onEachFeature: onEachFeature
-	    }).addTo(map);
-    });
+  $http.get("data/kenyacounties.geojson").success(function(json) {
+       geojson = L.geoJson(json, {
+      style: style,
+      onEachFeature: onEachFeature
+    }).addTo(map);
+  });
 
 	map.attributionControl.addAttribution('Oxfam Kenya Food Prices</a>');
 

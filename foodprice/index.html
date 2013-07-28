@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Oxfam Kenya Data</title>
-	<meta charset="utf-8" />
+  <title>Oxfam Kenya Data</title>
+  <meta charset="utf-8" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+  <link rel="stylesheet" href="css/client.css" />
   <!--[if lte IE 8]>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
   <![endif]-->
 </head>
-<body>
+<body ng-app='angularApp'>
     
-	<div id="map"></div>
+  <div id="map" ng-controller='MainController'></div>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="js/async.js"></script>
-  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>	<link rel="stylesheet" href="css/client.css" />
-	<script src="js/client.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+  <script src="js/client.js"></script>
 
-	<script type="text/javascript">
-    $( document ).ready(function() {
-      initDoc();
-    });
-	</script>
 </body>
 </html>
